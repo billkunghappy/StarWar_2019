@@ -1,0 +1,97 @@
+#questionBox {
+	text-align:center;
+	width: 800px;
+	height: 600px;
+	left: calc(50% - 400px);
+	top: calc(50% - 300px);
+	padding: 20px;
+	z-index: 100000;
+}
+#questionBox .qDes{
+	font-size:20px;
+	top:40px;
+	text-align: left;
+}
+#questionBox .qteam{
+	font-size:20px;
+	font-weight: 500;
+	top:20px;
+	right:50px;
+	text-align:left;
+	color: red;
+	/*color:aqua;*/
+
+}
+#questionBox form{
+	font-size:20px;
+	font-weight: 500;
+	top:40px;
+	text-align: left;
+	margin 20,20,0,0;
+}
+#questionBox #answerResult div{
+	top: 50px;
+	text-align: center;
+	font-size:23px;
+}
+#questionBox #answerResult img{
+	height: 100px;
+	width: 100px;
+	margin: 0px;
+}
+#questionBox #answerResult div h1{
+	top:70px;
+	margin: 0px;
+	font-size: 25px;
+	font-weight: 300;
+}
+.closeButton {
+	height: 35px;
+	width: 35px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.closeButton:hover {
+	height: 45px;
+	width: 45px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+.questionPopBox {
+	 background-color: rgba(255,255,255,0.85);
+	 border-style: solid;
+	 border-radius: 12px;
+	 border-width: 1px;
+	 border-color: #80f1dc;
+	 width:460px;
+	 position:absolute;
+	 left:50%;
+	 top:50%;
+	 text-align: center;
+	 display: none;
+	
+}
+.timer {
+	font-size:15px;
+	top:5px;
+	color: red;
+}
+.questionTitle {
+	color:black;
+	text-align: center;
+}
+.questionevent {
+	width: 560px;
+	height: 300px;
+	left: calc(50% - 280px);
+	top: calc(50% - 150px);
+	padding: 20px;
+}
+/*.options{
+
+	font-size:20px;
+
+}*/
+
