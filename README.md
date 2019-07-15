@@ -4,9 +4,9 @@
 ### Installation
 首先在電腦上安裝Node.js
 
-  $ git clone https://github.com/s123unny/StaRwaR.git
+  $ git clone https://github.com/billkunghappy/StarWar_2019.git
 
-  $ cd StaRwaR
+  $ cd StarWar_2019
 
   $ npm install
 
