@@ -188,7 +188,7 @@ Controller = function(io, model) {
 			}
 			io.sockets.to(playerIO[i].second).emit("night_start");
 		}
-		var Time = 10;
+		var Time = 60;
 		var mytimer = new timer(Time * 1000, io, nightTimeUp, adminIO);
 		mytimer.tick();
 	}
@@ -600,7 +600,13 @@ Controller = function(io, model) {
 							Update.Item(playerIO[i].second, "model", AImodel[i], 0);
 						}
 					}
+					if (model.day%5==0) {
+						var chat_msg = "提醒：model．在第"+ai_day[ai_event_day]+"天之前繳交可以獲得報酬，目前報酬的行情倍率如下: Audio: "+ai_ratio[ai_event_day].audio+" / Image: "+ai_ratio[ai_event_day].image+" / Text: "+ai_ratio[ai_event_day].text;
+						Update.Chatting(chat_msg, "SYSTEM","lime", playerIO, -1);
+					}
 				} else {
+					var msg = "Model 繳交時間已過，請把握下次機會～";
+					Update.Chatting(msg, "SYSTEM","lime", playerIO, -1);
 					ai_event_day = null;
 				}
 			}
