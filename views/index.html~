@@ -19,9 +19,9 @@
 		<!-- login window -->
 		<div id="login" class="confirmOverlay">
 			<div class="alertBox">
-				<h1 >Welcome to 2019 CSIE camp StarWar!</h1>
+				<h1 >Welcome to 2018 CSIE camp StarWar!</h1>
 				<span>PlayerID : <input id="teamID" type="number" class="minion_num" style="margin: 10px 10px 10px 20px; padding: 5px;" /></span></br>
-				<span>Name : <input maxlength="5" placeholder="名稱不超過5個字元" id="teamName" type="text" class="minion_num" style="margin: 10px 10px 10px 20px; padding: 5px;" /></span></br>
+				<span>Account : <input id="teamName" type="text" class="minion_num" style="margin: 10px 10px 10px 20px; padding: 5px;" /></span></br>
 				<span>Passwd : <input id="teamPassword" type="password" class="minion_num" style="margin: 10px 10px 10px 26.5px; padding: 5px;" /></span></br>
 				<div class="confirmButtons">
 					<a href="#" class="button" onclick="login()">Login<span></span></a>
