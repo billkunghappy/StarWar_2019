@@ -64,7 +64,7 @@ Controller = function(io, model) {
 		if (state == "Mine") {
 			var total = 0
 			for (var j = 0; j < 5; j++) {
-				if (getRewardPlayer[j] != null) {
+				if (star.player_here[j] != null) {
 					total += model.players[j].ships[star.player_here[j]].num_of_miner;
 				}
 			}
@@ -74,6 +74,7 @@ Controller = function(io, model) {
 						break;
 					}
 					var add = total;
+					console.log(total);
 					add = Math.round(model.players[j].skill['GPU'].method(Math.pow(add,0.75))*star.mine);
 					model.players[j].money += add;
 					totalmoney += add;
