@@ -192,9 +192,7 @@
 						</form>
 					</div>
 					<div class="content">
-						<select id="assign_mblock_slot<%=i%>_target" class="choosetype" name="YourLocation" style="width: 67px">
-								<option value="none">None</option>
-
+						<select id="option_holder<%=i%>_target" style="display: none;">
 							<% for (let j of mines) { -%>
 								<option value="<%= j %>" class="mine"><%= id2name[j] %></option>
 							<% } -%>
@@ -212,17 +210,20 @@
 									<option value="<%= j %>" class="learn"><%= j %></option>
 								<% } -%>
 							<% } -%>
-								
+							<!-- empty holder -->
+						</select>
+						<select id="assign_mblock_slot<%=i%>_target" class="choosetype" name="YourLocation" style="width: 67px">
+								<option value="none">None</option>					
 						</select>
 					</div>
 					<div class="content">
-						<input id="assign_mblock_slot<%=i%>_M" class="minion_num" type="number" min="0" step="1" name="# of miner" style="width: 50px";>
+						<input id="assign_mblock_slot<%=i%>_M" class="minion_num choose_miner" type="number" min="0" step="1" name="# of miner" max= "<%= player.num_of_miner - player.num_of_working_miner() %>" value="0" style="width: 50px";>
 					</div>
 					<div class="content">
-						<input id="assign_mblock_slot<%=i%>_T" class="minion_num" type="number" min="0" step="1" name="# of miner" style="width: 50px";>
+						<input id="assign_mblock_slot<%=i%>_T" class="minion_num choose_trainer" type="number" min="0" step="1" name="# of trainer"  max= "<%= player.num_of_trainer - player.num_of_working_trainer() %>" value="0" style="width: 50px";>
 					</div>
 					<div class="content">
-						<input id="assign_mblock_slot<%=i%>_H" class="minion_num" type="number" min="0" step="1" name="# of hacker" style="width: 50px";>
+						<input id="assign_mblock_slot<%=i%>_H" class="minion_num choose_hacker" type="number" min="0" step="1" name="# of hacker"  max= "<%= player.num_of_haker - player.num_of_working_haker() %>" value="0" style="width: 50px";>
 					</div>
 					<div class="content">
 						<form >
@@ -293,7 +294,7 @@
 			<div>
 				<h3>Rainbow</h3>	<!-- skill name-->
 				<p style="color:red;">Hint: Colorful is powerful !</p>
-				<p showlevel="3"><i>Get: Change the color of your chatting room</i></p>
+				<p showlevel="3"><i>Get: Change the text color of your chatting room</i></p>
 			</div>			
 		</div>
 		<div class="arrow right" style="left: 7px; top: -65px;"></div>
@@ -320,7 +321,7 @@
 		<!-- skill * 8 -->
 		<div class="skill skill angel" current="<%= skill['God-of-Crypto'].current %>" max="5" skillid="God-of-Crypto" sprite="7x6" id="God-of-Crypto" <% if (!skill["Rainbow"].learned) { -%> musthave="QQ" <% } -%> onclick="add_skill('God-of-Crypto')">
 			<div>
-				<h3>Time Traveler</h3>	<!-- skill name-->
+				<h3>God-of-Crypto</h3>	<!-- skill name-->
 				<p style="color:red">Hint: I think it is interesting if one day you can control every ships ...</p> <!-- discription name-->
 				<p showlevel="5"><i>Get: All ships except yours are unable to move for one round. Activate immediately</i></p>
 			</div>
@@ -331,7 +332,7 @@
 			<div>
 				<h3>Respectful Player</h3>	<!-- skill name-->
 				<p style="color:red;">Hint: Sometimes you need another kind of reward</p> <!-- discription name-->
-				<p showlevel="5"><i>Get: Add [尊貴的] to your name</i></p>
+				<p showlevel="5"><i>Get: Add [尊貴的] to your name in the chat room</i></p>
 			</div>
 		</div>
 		<div class="arrow down" style="left: -315px; top: 0px;"></div>

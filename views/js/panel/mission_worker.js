@@ -15,20 +15,22 @@ function render_target(row){
 	if (type == "learn"){
 		for (var idx = all_type.length - 1; idx >= 0; idx--){
 			if (all_type[idx] != type){
-				$("#assign_mblock_slot"+row+"_target option[class="+all_type[idx]+"]").hide();
+				$("#assign_mblock_slot"+row+"_target option[class="+all_type[idx]+"]").appendTo('#option_holder'+row+"_target");
+				console.log(all_type[idx]+" hide");
 			}
 			else{
-				$("#assign_mblock_slot"+row+"_target option[class="+all_type[idx]+"]").show();
+				$("#option_holder"+row+"_target option[class="+all_type[idx]+"]").appendTo("#assign_mblock_slot"+row+"_target");
 			}		
 		}		
 	}
 	else{
 		for (var idx = all_type.length - 1; idx >= 0; idx--){
 			if (all_type[idx] != type){
-				$("#assign_mblock_slot"+row+"_target option[class="+all_type[idx]+"]").hide();
+				// alert(all_type[idx]);
+				$("#assign_mblock_slot"+row+"_target option[class="+all_type[idx]+"]").appendTo('#option_holder'+row+"_target");
 			}
 			else{
-				$("#assign_mblock_slot"+row+"_target option[class="+all_type[idx]+"]").show();
+				$("#option_holder"+row+"_target option[class="+all_type[idx]+"]").appendTo("#assign_mblock_slot"+row+"_target");
 			}		
 		}
 		var div = document.querySelector("#assign_mblock_slot"+row+"_target"),
@@ -38,6 +40,7 @@ function render_target(row){
     	});
     	// console.log(paraArr);
     	paraArr.forEach(function (p) {
+    		console.log("append");
         	div.appendChild(p);
     	});
 	}
@@ -141,8 +144,11 @@ function update_value(miner, trainer, hacker){
 	working_miner_num += miner;
 	working_hacker_num += hacker;
 	$('#standby_trainer_num').text(standby_trainer_num);
+	$('.choose_trainer').attr({"max":standby_trainer_num});
 	$('#standby_miner_num').text(standby_miner_num);
+	$('.choose_miner').attr({"max":standby_miner_num});
 	$('#standby_hacker_num').text(standby_hacker_num);
+	$('.choose_hacker').attr({"max":standby_hacker_num});
 	$('#working_trainer_num').text(working_trainer_num);
 	$('#working_miner_num').text(working_miner_num);
 	$('#working_hacker_num').text(working_hacker_num);

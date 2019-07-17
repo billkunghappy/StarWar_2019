@@ -370,6 +370,11 @@ Controller = function(io, model) {
 										Update.Chatting(msg, "SYSTEM", "aqua", playerIO, j);
 									} else if (star.cannotback[j] > 0) {
 										star.cannotback[j] -= 1;
+										if (star.cannotback[j]==0) {
+											star.cannotback[j] = null;
+											msg = player.name+"在"+id2name[i]+"星球的扣留期間結束，請儘速離開";
+											Update.Chatting(msg, "SYSTEM", "aqua", playerIO, j);
+										}
 									} else {
 										star.cannotback[j] = null;
 									}
@@ -640,7 +645,7 @@ Controller = function(io, model) {
 	
 	/* Listen new connection */
 	io.on("connection", (player) => {
-
+		console.log(playerIO);
 		console.log("New connection.");
 		player.on("login", (id, name, psw) => {
 			// login password check

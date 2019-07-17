@@ -15,6 +15,7 @@ function add_trainer(){
 		console.log(num);
 		$('#Money').text(money);
 		$('#standby_trainer_num').text(num);
+		$('.choose_trainer').attr({"max":num});
 		// socket.emit('trainer_num', money, num);
 	}
 	else{
@@ -31,6 +32,7 @@ function minus_trainer(){
 	if (num >= 1){
 		num -= 1;
 		$('#standby_trainer_num').text(num);
+		$('.choose_trainer').attr({"max":num});
 		// socket.emit('trainer_num', money, num);
 	}
 	else{
@@ -51,6 +53,7 @@ function add_miner(){
 		console.log(num);
 		$('#Money').text(money);
 		$('#standby_miner_num').text(num);
+		$('.choose_miner').attr({"max":num});
 		// socket.emit('miner_num', money, num);
 	}
 	else{
@@ -67,6 +70,7 @@ function minus_miner(){
 	if (num >= 1){
 		num -= 1;
 		$('#standby_miner_num').text(num);
+		$('.choose_miner').attr({"max":num});
 		// socket.emit('miner_num', money, num);
 	}
 	else{
@@ -87,6 +91,7 @@ function add_hacker(){
 		console.log(num);
 		$('#Money').text(money);
 		$('#standby_hacker_num').text(num);
+		$('.choose_hacker').attr({"max":num});
 		// socket.emit('hacker_num', money, num);
 	}
 	else{
@@ -103,6 +108,7 @@ function minus_hacker(){
 	if (num >= 1){
 		num -= 1;
 		$('#standby_hacker_num').text(num);
+		$('.choose_hacker').attr({"max":num});
 		// socket.emit('hacker_num', money, num);
 	}
 	else{

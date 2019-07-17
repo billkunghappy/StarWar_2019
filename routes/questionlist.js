@@ -325,12 +325,12 @@ module.exports = function(io) {
 			"id": 21,
 			"multi": false,
 			"subject": "Python",
-			"description" : "[2, 0, 1, 7][-2]會回傳什麼值？ (單選）（ 提示:index )",
+			"description" : "[2, 0, 1, 9][-2]會回傳什麼值？ (單選）（ 提示:index )",
 			"options": [
 				"2",
 				"0",
 				"1",
-				"7",
+				"9",
 				"8",
 			],
 			"correct": [2]
