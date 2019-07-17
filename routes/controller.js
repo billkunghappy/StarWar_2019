@@ -42,8 +42,8 @@ Controller = function(io, model) {
 	var io = io;
 	var playerIO = [{},{},{},{},{}];
 	var mine = ["m0", "m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9"];
-	var abandon = ["a0", "a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8", "a9", "a10", "a11", "a12", "a13", "a14"];
-	var starDatasetType = {a9: "image", a10: "image", a11: "text", a12: "text", a13: "audio", a14: "audio"};
+	var abandon = ["a0", "a1", "a2", "a13", "a4", "a5", "a6", "a7", "a8", "a9", "a10", "a11", "a12", "a3", "a14"];
+	var starDatasetType = {a9: "image", a10: "image", a11: "text", a12: "text", a3: "audio", a14: "audio"};
 	var computer = ["c0", "c1", "c2", "c3", "c4"];
 	var model = global.model;
 	var count = 0;
@@ -188,7 +188,7 @@ Controller = function(io, model) {
 			}
 			io.sockets.to(playerIO[i].second).emit("night_start");
 		}
-		var Time = 60;
+		var Time = 10;
 		var mytimer = new timer(Time * 1000, io, nightTimeUp, adminIO);
 		mytimer.tick();
 	}
@@ -306,10 +306,13 @@ Controller = function(io, model) {
 			mine_process(substate);	
 			break;
 		case "Abandon":
+		console.log("switch abandon");
 			for (let i of abandon) {
+				console.log(i,substate);
 				if (i != substate) {
 					continue;
 				}
+				console.log("get star");
 				star = model.stars[i];
 				if (star.num > 0) {
 					if (!star.found) {
@@ -357,7 +360,7 @@ Controller = function(io, model) {
 							}
 						}
 						break;
-					case "a3":
+					case "a13":
 						//Mine
 						for (var j = 0; j < 5; j++) {
 							if (star.player_here[j] != null) {
@@ -495,8 +498,9 @@ Controller = function(io, model) {
 					case "a10":
 					case "a11":
 					case "a12":
-					case "a13":
+					case "a3":
 					case "a14":
+						console.log("switch datastar");
 						//dataset
 						// if (model.day % 11 == 0) {
 						// 	amount = datasetAmount[11];

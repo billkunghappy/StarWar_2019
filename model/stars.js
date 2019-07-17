@@ -17,7 +17,7 @@ var stars = {
 	a0: {id: "a0", x_pos: 10, y_pos: 1, type: 'abandon', subtype: 'black', blackhole: false},
 	a1: {id: "a1", x_pos: 8, y_pos: 3, type: 'abandon', subtype: 'desert'},
 	a2: {id: "a2", x_pos: 5, y_pos: 1, type: 'abandon', subtype: 'desert'},
-	a3: {id: "a3", x_pos: 9, y_pos: 5, type: 'abandon', subtype: 'MINE'},
+	a13: {id: "a13", x_pos: 0, y_pos: 4, type: 'abandon', subtype: 'MINE'},//
 	a4: {id: "a4", x_pos: 7, y_pos: 8, type: 'abandon', subtype: 'HAKER'},
 	a5: {id: "a5", x_pos: 0, y_pos: 3, type: 'abandon', subtype: 'option'},
 	a6: {id: "a6", x_pos: 4, y_pos: 9, type: 'abandon', subtype: 'option'},
@@ -27,7 +27,7 @@ var stars = {
 	a10: {id: "a10", x_pos: 3, y_pos: 3, type: 'abandon', subtype: 'data'},
 	a11: {id: "a11", x_pos: 3, y_pos: 7, type: 'abandon', subtype: 'data'},
 	a12: {id: "a12", x_pos: 9, y_pos: 2, type: 'abandon', subtype: 'data'},
-	a13: {id: "a13", x_pos: 0, y_pos: 4, type: 'abandon', subtype: 'data'},
+	a3: {id: "a3", x_pos: 9, y_pos: 5, type: 'abandon', subtype: 'data'},//'MINE'
 	a14: {id: "a14", x_pos: 4, y_pos: 2, type: 'abandon', subtype: 'data'},
 	b0: {id: "b0", x_pos: 2, y_pos: 6, type: 'base'},
 	b1: {id: "b1", x_pos: 6, y_pos: 2, type: 'base'},
@@ -77,9 +77,9 @@ for (var id in stars) {
 	node.found = false;
 	node.num = 0;
 	node.player_here = [null, null, null, null, null];
-	if (id == "a3" || id == "a4") {
+	if (id == "a13" || id == "a4") {
 		node.trigger = [false, false, false, false, false];
-		if (id == "a3") {
+		if (id == "a13") {
 			node.cannotback = [null, null, null, null, null];
 		}
 	} else if (node.type == 'computer') {

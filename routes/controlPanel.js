@@ -46,9 +46,9 @@ function shipStatus(ships, id, stars, skillid) {
 			}
 		}
 	}
-	if (stars["a3"].cannotback[id] != null && stars["a3"].cannotback[id] > 0) {
-		list[ stars["a3"].player_here[id] ] = true;
-		day[ stars["a3"].player_here[id] ] = stars["a3"].cannotback[id];
+	if (stars["a13"].cannotback[id] != null && stars["a13"].cannotback[id] > 0) {
+		list[ stars["a13"].player_here[id] ] = true;
+		day[ stars["a13"].player_here[id] ] = stars["a13"].cannotback[id];
 	}
 	for (var i = 0; i < 5; i++) {
 		if (ships[i].targetId == null) {
