@@ -1,7 +1,7 @@
 var Skill = require("./skill")
 const MONEY_INIT = 40;
 const WORKER_INIT = 1;
-const x_POS = [2,6,7,5,10]
+const x_POS = [2,6,8,5,10]
 const y_POS = [6,2,6,4,3]
 ship = function(id, user_id) {
 	return {
