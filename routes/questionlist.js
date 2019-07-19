@@ -23,14 +23,14 @@ module.exports = function(io) {
 			"id": 1,
 			"multi" : false,
 			"subject" : "Secure",
-			"description" : "講師曾建議應如何學習資安(單選)",
+			"description" : "CIA 是下列何者的簡寫(單選)",
 			"options" : [
-				"學習如何攻擊",
-				"學習如何防禦",
-				"先學防禦後學攻擊",
-				"以攻擊者的角度來防禦",
+				"Central Intelligence Agency",
+				"Computer Informational Automation",
+				"Confidentiality Integrity Availability",
+				"Chief In Africa",
 			],
-			"correct" : [ 3 ]
+			"correct" : [ 2 ]
 		},
 
 		{
@@ -126,14 +126,13 @@ module.exports = function(io) {
 			//"money": 5000,
 			"id": 8,
 			"multi" : false,
-			"subject" : "Fintech-區塊鏈",
-			"description" : " 比較Client-Server和P2P兩種溝通架構差異的敘述哪一個是錯的(單選)",
+			"subject" : "資安",
+			"description" : "下列何者非常用的加密方式？(單選)",
 			"options" : [
-				"信任方式:間接 v.s.直接",
-				"溝通方式:通過第三方 v.s. 節點之間直接溝通",
-				"中心化程度:高 v.s. 低",
-				"額外成本:無 v.s. 可能需要手續費",
-				"舉例:銀行 v.s.面對面交易",
+				"RSA",
+				"AES",
+				"Hash",
+				"AIHA",
 			],
 			"correct" : [ 3 ]
 		},
@@ -142,16 +141,16 @@ module.exports = function(io) {
 			//"money": 5000,
 			"id": 9,
 			"multi" : true,
-			"subject" : "Fintech-區塊鏈",
-			"description" : " 區塊鏈的概念首次在2008年末由中本聰提出，因為認為現實世界存在了以下哪些問題(多選)",
+			"subject" : "網路安全",
+			"description" : "關於網頁 cookie 的敘述，下列哪些正確？(多選)",
 			"options" : [
-				"間接信任關係",
-				"直接信任關係",
-				"中間人&手續費",
-				"第三方",
-				"以上皆是",
+				"要搭配 cake",
+				"常用來檢驗用戶身份",
+				"有時候會附贈 coffee",
+				"會被存在瀏覽器上",
+				"3C 是指 cookie, cake, coffee",
 			],
-			"correct" : [ 0, 2, 3 ]
+			"correct" : [ 1, 3 ]
 		},
 
 		{
@@ -357,13 +356,13 @@ module.exports = function(io) {
 			"id": 23,
 			"multi": false,
 			"subject": "Python",
-			"description" : "要如何從s = \"2018臺大資訊營-遇見你資後\"中取出\"遇見你資後\"？ (單選)",
+			"description" : "要如何從s = \"2019臺大資訊營-就想這young資\"中取出\"就想這young資\"？ (單選)",
 			"options": [
 				"s[\"你的程式\"]",
-				"s[-5]",
-				"s[10 ~ 15]",
-				"s[10 : 15]",
-				"s[10 - 15]",
+				"s[-9]",
+				"s[10 ~ 19]",
+				"s[10 : 19]",
+				"s[10 - 19]",
 			],
 			"correct": [3]
 
@@ -417,16 +416,16 @@ module.exports = function(io) {
 			"id": 27,
 			"multi": false,
 			"subject": "金頭腦題",
-			"description" : "甲乙丙丁戊五人由左至右坐成一排，你要從他們口述的一些線索中，找出他們每個人的位置！" + 
+			"description" : "甲乙丙丁戊五人坐成一排，你要從他們口述的一些線索中，找出他們每個人的位置！" + 
 				"</br>    甲：我和丁中間坐了兩個人" +
-				"　　　　乙：我乙的右邊沒坐人" +
+				"　　　　乙：我的右邊沒坐人" +
 				"</br>    丙：我坐在正中央" +
 				"　　　　　　　　丁：甲坐在丙旁邊" +
 				"</br>    戊：我坐在丁旁邊" +
 				"</br>請問以下有哪些正確？ (單選)  (提示：這五個人都很誠實。)",
 			"options": [
 				"甲坐在戊旁邊",
-				"乙在甲的旁邊",
+				"乙在丁的旁邊",
 				"丙坐在甲旁邊",
 				"甲不在乙旁邊",
 			],
@@ -464,31 +463,30 @@ module.exports = function(io) {
 		{
 			"id": 30 ,
 			"multi": true  ,
-			"subject": "Fintech-區塊鏈",
-			"description" : "請問區塊鏈的技術可以應用到哪些方面 (多選)",
+			"subject": "JavaScript",
+			"description" : "下列哪些行為較能防範 XSS 攻擊？ (多選)",
 			"options": [
-				"醫療保健",
-				"金融服務",
-				"商品市場",
-				"慈善機構",
-				"政府"
+				"清理輸入資料",
+				"鍛鍊身體",
+				"禁止跨來源資源共用",
+				"在瀏覽器內建保護機制",
+				"多喝水"
 			],
-			"correct": [0,1,2,3,4]
+			"correct": [0,2,3]
 
 		},
 		{
 			"id": 31 ,
 			"multi": false  ,
-			"subject": "Fintech-區塊鏈",
-			"description" : "以下何者是區塊鏈的性質?(單選)",
+			"subject": "版本控制",
+			"description" : "下列何者不是用 git 控制版本的好處？(單選)",
 			"options": [
-				"中心化",
-				"中介化",
-				"透明、公開",
-				"可竄改",
-				"信任系統"
+				"能還原程式碼",
+				"能開啟分支(branch) 進行分工",
+				"不同分支可以進行整合(merge)",
+				"可以不用網路來更新共同資料庫(repo)",
 			],
-			"correct": [2]
+			"correct": [3]
 
 		},	
 		{
