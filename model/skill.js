@@ -19,7 +19,7 @@ function MakePlayerSkill(){
 			'Tax-Collector':[2, 'General', function(){if(this.learned && this.usable){this.usable = false;return true;} else{return false;}},['GPU']],
 			'Legacy-of-Ancient-God':[1, 'General', function(){if(this.learned){return 5;}else{return 3}},['Tax-Collector','GAN','Rainbow']], 
 			'GAN':[2, 'ML', function(pay){if(this.learned){return 1.5 * pay;} else{return pay;}},['Deep-Learning']],
-			'GPU':[3, 'MINOR', function(money){if(this.learned){return Round(1.2 * money);} else{return money;}},['How-Universe']], 
+			'GPU':[3, 'MINOR', function(money){if(this.learned){return Math.round(1.2 * money);} else{return money;}},['How-Universe']], 
 			'Rainbow':[3, 'General', function(id){
 				if(this.learned){if(id == 0)return "orange";else if(id == 1)return "yellow";else if(id == 2)return "pink";else if(id == 3)return "violet";else if(id == 4)return "salmon";} 
 				else{return "white";}},['God-of-Crypto','Deep-Learning','GPU']], 
